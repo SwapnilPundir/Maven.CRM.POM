@@ -42,6 +42,6 @@ public class TestUtil extends TestBase{
 	
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("D:\\Selenium\\Maven\\Error screenshot" + System.currentTimeMillis() +".png"));
+		FileUtils.copyFile(src, new File("D:\\Selenium\\Maven\\Error screenshot\\" + System.currentTimeMillis() +".png"));
 	}
 }
