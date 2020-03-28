@@ -1,11 +1,15 @@
 package com.crm.qa.util;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import com.crm.qa.base.TestBase;
 
@@ -35,5 +39,9 @@ public class TestUtil extends TestBase{
 		}
 		return data;
 	}
-
+	
+	public static void takeScreenshotAtEndOfTest() throws IOException {
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("D:\\Selenium\\Maven\\Error screenshot" + System.currentTimeMillis() +".png"));
+	}
 }
