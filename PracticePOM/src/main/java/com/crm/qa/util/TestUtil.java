@@ -15,8 +15,8 @@ import com.crm.qa.base.TestBase;
 
 public class TestUtil extends TestBase{
 	
-	public static long Page_Load_Timeout = 20;
-	public static long Implicitly_Wait = 10;
+	public static long Page_Load_Timeout = 50;
+	public static long Implicitly_Wait = 30;
 	
 	public void swtichToFrame() {
 		driver.switchTo().frame("mainpanel");

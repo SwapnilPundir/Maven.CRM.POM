@@ -19,6 +19,7 @@ public class LoginPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void setup() {
+		System.out.println("Class name - "+ this.getClass().getName() + "| Thread no. = " +Thread.currentThread().getId());
 		initialization();
 		loginpage = new LoginPage();
 		

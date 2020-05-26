@@ -26,7 +26,7 @@ public class HomePageTest extends TestBase{
 	
 	@BeforeMethod
 	public void setup() {
-	initialization();
+		System.out.println("Class name - "+ this.getClass().getName() + "| Thread no. = " +Thread.currentThread().getId());	initialization();
 	testUtil = new TestUtil();
 	loginpage = new LoginPage();
 	contactsPage = new ContactsPage();
